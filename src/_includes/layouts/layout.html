@@ -3,7 +3,7 @@
   {% include "components/head.html" %}
 
   <body class="{{ pageClass }}">
-    {% include "components/nav.html" %}
+    {% include "components/nav.html" %} {% include "components/header.html" %}
 
     <main class="content" tabindex="-1">
       <h1>{{ pageTitle }}</h1>
@@ -11,6 +11,6 @@
       {{ content }}
     </main>
 
-    <script src="/js/scripts.js"></script>
+    <script src="/js/scripts.js" type="module"></script>
   </body>
 </html>
