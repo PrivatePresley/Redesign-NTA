@@ -1,0 +1,48 @@
+form {
+  padding: 2em 0;
+}
+
+label {
+  display: block;
+}
+
+input,
+textarea {
+  border: 1px solid $med-gray;
+  border-radius: 5px;
+}
+
+input,
+textarea {
+  width: 90%;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+button {
+  padding: 6px;
+  border: 1px solid $link;
+  background-color: $link;
+  color: #fff;
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 15px lighten($link, 40%);
+}
+
+input:required,
+textarea:required {
+  background-color: lighten($link, 60%);
+}
+
+input:valid,
+textarea:valid {
+  background-color: lighten(green, 60%);
+}
+
+input:focus:invalid,
+textarea:focus:invalid {
+  background-color: lighten(red, 40%);
+}

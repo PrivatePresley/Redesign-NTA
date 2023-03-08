@@ -1,0 +1,67 @@
+#pull {
+  display: block;
+  background-color: $link;
+  padding-top: 12px;
+  padding-left: 12px;
+  @media (min-width: $break-med) {
+    display: none;
+  }
+}
+
+#pull::after {
+  content: "";
+  background: url(../img/nav-icon.png) no-repeat;
+  width: 22px;
+  height: 22px;
+  background-size: cover;
+  display: inline-block;
+}
+
+nav ul {
+  display: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: $link;
+  @media (min-width: $break-med) {
+    display: flex;
+    justify-content: space-around;
+    background: $link;
+    text-align: center;
+  }
+}
+
+nav a {
+  padding: 1rem;
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+nav li {
+  &:hover:not(.active) {
+    background-color: lighten($link, 10%);
+  }
+  @media (min-width: $break-med) {
+    flex-grow: 1;
+  }
+}
+
+nav .active {
+  background-color: darken($link, 10%);
+}
+
+nav .active a {
+  font-weight: bold;
+}
+
+.show-nav nav ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+}

@@ -16,14 +16,24 @@ a {
   color: #007eb6;
 }
 
-nav ul {
-  padding: 0;
-  list-style: none;
-  display: flex;
+section {
+  @media (min-width: $break-med) {
+    max-width: $max-width;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-column-gap: 1rem;
+    padding-top: 2rem;
+    article {
+      iframe {
+        min-height: 300px;
+      }
+    }
+  }
 }
 
-nav ul a {
-  padding: 0.5rem 1rem;
+p {
+  margin: 1rem 0;
 }
 
 .content {
@@ -32,12 +42,6 @@ nav ul a {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   border-left: 2px solid #007eb66e;
-  border-radius: 4px;
-}
-
-.nav-item-active a {
-  color: #fff;
-  background-color: #007eb6;
   border-radius: 4px;
 }
 

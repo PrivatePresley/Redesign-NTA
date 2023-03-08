@@ -1,5 +1,5 @@
 header {
-  max-width: 980px;
+  max-width: $max-width;
   margin: 0 auto;
   padding-top: 2rem;
   h1 {
@@ -7,7 +7,7 @@ header {
   }
   p {
     display: none;
-    @media (min-width: 780px) {
+    @media (min-width: $break-med) {
       display: block;
       font-size: 1.5rem;
       text-transform: uppercase;
@@ -17,11 +17,11 @@ header {
   }
   h1 + p {
     padding-top: 1rem;
-    border-top: 3px double #dbd1b5;
+    border-top: 3px double $dk-yellow;
   }
   p + p {
     font-size: 1rem;
     line-height: 1.1;
-    color: #999;
+    color: $med-gray;
   }
 }
